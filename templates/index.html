@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+</head>
+<body>
+   
+    <div class="content">
+    <div class="text">
+    <h2 style="text-align: center;">Predict The House price in Boston</h2>
+    <form action="/visual">
+        <input type="submit" value="Visualization">
+    </form>
+    <br><br>
+    <form action="/github">
+        <input type="submit" value="Github">
+    </form>
+
+    <h2>Please Fill Your Detials</h2>
+
+    <div class="forms">
+    
+    <form action="/predict" method="POST">
+       <p> proportion of residential land zoned for lots over 25,000 sq.ft : </p>
+       <input type="text" name="zn"  >
+       <p> Charles River : </p>
+       <input type="text" name="chas" >
+       <p> nitric oxides concentration: </p>
+       <input type="text" name="nox"  >
+       <p>  average text of rooms per dwelling : </p>
+       <input type="text" name="rm"  >
+       <p> weighted distances to five Boston employment centres : </p>
+       <input type="text" name="dis"  >
+       <p> index of accessibility to radial highways : </p>
+       <input type="text" name="rad"  >
+       <p> full-value property-tax rate per $10,000 : </p>
+       <input type="text" name="tax"  >
+       <p> pupil-teacher ratio by town: </p>
+       <input type="text" name="ptratio"  >
+       <p> Bk is the proportion of blacks by town: </p>
+       <input type="text" name="b"  >
+       <p> lower status of the population: </p>
+       <input type="text" name="lsotp"  >
+       <p> Crime Ratio </p>
+       <input type="text" name="crime"  >
+
+       <br> <br>
+       <input type="submit" name="submit" value="predict" id="submit" />
+      
+    
+
+    </form>
+   </div>
+   <h2 >{{chance}}</h2>
+    </div>
+    </div>
+    
+</body>
+</html>
